@@ -31,7 +31,7 @@ module.exports = {
       return templateVersion
     },
   },
-  
+
   prompts: {
     name: {
       when: 'isNotTest',
@@ -100,6 +100,19 @@ module.exports = {
           short: 'none',
         },
       ],
+    },
+    stylelint: {
+      when: 'isNotTest',
+      type: 'list',
+      required: true,
+      message: 'Setup stylelint For Project?',
+      choices: [
+        {
+          name: 'Yes (Mandatory required by our code style guide!!!)',
+          value: 'yes',
+          short: 'yes',
+        }
+      ]
     },
     unit: {
       when: 'isNotTest',
@@ -170,6 +183,7 @@ module.exports = {
     'test/unit/setup.js': "unit && runner === 'jest'",
     'test/e2e/**/*': 'e2e',
     'src/router/**/*': 'router',
+    '.stylelintrc': "stylelint === 'yes'",
   },
   complete: function(data, { chalk }) {
     const green = chalk.green

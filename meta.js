@@ -114,6 +114,23 @@ module.exports = {
         }
       ]
     },
+    httpLib: {
+      when: 'isNotTest',
+      type: 'list',
+      message: 'Setup HTTP Library?',
+      choices: [
+        {
+          name: 'axios (We prefer axios to fetch!)',
+          value: 'axios',
+          short: 'axios',
+        },
+        {
+          name: 'none (configure it yourself)',
+          value: 'noTest',
+          short: 'noTest',
+        }
+      ]
+    },
     unit: {
       when: 'isNotTest',
       type: 'confirm',
@@ -184,6 +201,8 @@ module.exports = {
     'test/e2e/**/*': 'e2e',
     'src/router/**/*': 'router',
     '.stylelintrc': "stylelint === 'yes'",
+    'src/http.js': "httpLib === 'axios'",
+    'src/api/**/*': "httpLib === 'axios'",
   },
   complete: function(data, { chalk }) {
     const green = chalk.green

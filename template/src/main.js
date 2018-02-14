@@ -3,6 +3,10 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 {{/if_eq}}
 import Vue from 'vue'
+{{#dependencies.element}}
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+{{/dependencies.element}}
 import App from './App'
 {{#router}}
 import router from './router'
@@ -12,6 +16,10 @@ import store from './store'
 {{/vuex}}
 
 Vue.config.productionTip = false
+
+{{#dependencies.element}}
+Vue.use(ElementUI)
+{{/dependencies.element}}
 
 /* eslint-disable no-new */
 new Vue({

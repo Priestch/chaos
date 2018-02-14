@@ -28,7 +28,9 @@
     "vue": "^2.5.2"{{#vuex}},
     "vuex": "^3.0.1"{{/vuex}}{{#router}},
     "vue-router": "^3.0.1"{{/router}}{{#if_eq httpLib "axios"}},
-    "axios": "^0.17.1"{{/if_eq}}
+    "axios": "^0.17.1"{{/if_eq}}{{#dependencies.moment}},
+    "moment": "^2.20.1"{{/dependencies.moment}}{{#dependencies.element}},
+    "element-ui": "^2.2.0"{{/dependencies.element}}
   },
   "devDependencies": {
     {{#lint}}

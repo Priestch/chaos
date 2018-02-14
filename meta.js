@@ -185,6 +185,23 @@ module.exports = {
       type: 'confirm',
       message: 'Setup e2e tests with Nightwatch?',
     },
+    dependencies: {
+      when: 'isNotTest',
+      type: 'checkbox',
+      message: 'Select package you want to install',
+      choices: [
+        {
+          name: 'element-ui',
+          value: 'element',
+          short: 'element',
+        },
+        {
+          name: 'moment',
+          value: 'moment',
+          short: 'moment',
+        },
+      ]
+    },
     autoInstall: {
       when: 'isNotTest',
       type: 'list',

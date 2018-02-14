@@ -109,7 +109,7 @@ module.exports = {
       choices: [
         {
           name: 'Yes (Mandatory required by our code style guide!!!)',
-          value: 'yes',
+          value: true,
           short: 'yes',
         }
       ]
@@ -217,7 +217,7 @@ module.exports = {
     'test/unit/setup.js': "unit && runner === 'jest'",
     'test/e2e/**/*': 'e2e',
     'src/router/**/*': 'router',
-    '.stylelintrc': "stylelint === 'yes'",
+    '.stylelintrc': "stylelint",
     'src/http.js': "httpLib === 'axios'",
     'src/api/**/*': "httpLib === 'axios'",
   },

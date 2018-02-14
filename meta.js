@@ -74,6 +74,11 @@ module.exports = {
       type: 'confirm',
       message: 'Install vue-router?',
     },
+    vuex: {
+      when: 'isNotTest',
+      type: 'confirm',
+      message: 'Install vuex?',
+    },
     lint: {
       when: 'isNotTest',
       type: 'confirm',
@@ -217,6 +222,7 @@ module.exports = {
     'test/unit/setup.js': "unit && runner === 'jest'",
     'test/e2e/**/*': 'e2e',
     'src/router/**/*': 'router',
+    'src/store/**/*': 'vuex',
     '.stylelintrc': "stylelint",
     'src/http.js': "httpLib === 'axios'",
     'src/api/**/*': "httpLib === 'axios'",

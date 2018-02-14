@@ -25,7 +25,8 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "vue": "^2.5.2"{{#router}},
+    "vue": "^2.5.2"{{#vuex}},
+    "vuex": "^3.0.1"{{/vuex}}{{#router}},
     "vue-router": "^3.0.1"{{/router}}{{#if_eq httpLib "axios"}},
     "axios": "^0.17.1"{{/if_eq}}
   },

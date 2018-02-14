@@ -89,6 +89,10 @@
     "stylelint-config-standard": "^18.0.0",
     "stylelint-webpack-plugin": "^0.10.1",
     {{/stylelint}}
+    {{#if_eq preprocessor "sass"}}
+    "sass-loader": "^6.0.6",
+    "node-sass": "^4.7.2",
+    {{/if_eq}}
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",

@@ -131,6 +131,23 @@ module.exports = {
         }
       ]
     },
+    preprocessor: {
+      when: 'isNotTest',
+      type: 'list',
+      message: 'Setup CSS Preprocessor?',
+      choices: [
+        {
+          name: 'SASS (We prefer SASS to LESS!)',
+          value: 'sass',
+          short: 'sass',
+        },
+        {
+          name: 'none (configure it yourself)',
+          value: 'noTest',
+          short: 'noTest',
+        }
+      ]
+    },
     unit: {
       when: 'isNotTest',
       type: 'confirm',
